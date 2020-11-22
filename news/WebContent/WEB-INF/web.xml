@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>news</display-name>
+  <welcome-file-list>
+    <welcome-file>appQueryNews</welcome-file>
+  </welcome-file-list>
+  <!-- 账户管理 -->
+  <servlet>
+  	<servlet-name>UserLoginServlet</servlet-name>
+  	<servlet-class>com.news.controller.UserLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UserLoginServlet</servlet-name>
+  	<url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>UserLogoutServlet</servlet-name>
+  	<servlet-class>com.news.controller.UserLogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UserLogoutServlet</servlet-name>
+  	<url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>UserQueryServlet</servlet-name>
+  	<servlet-class>com.news.controller.UserQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UserQueryServlet</servlet-name>
+  	<url-pattern>/queryUser</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>UserInsertServlet</servlet-name>
+  	<servlet-class>com.news.controller.UserInsertServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UserInsertServlet</servlet-name>
+  	<url-pattern>/insertUser</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>UserUpdateServlet</servlet-name>
+  	<servlet-class>com.news.controller.UserUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UserUpdateServlet</servlet-name>
+  	<url-pattern>/updateUser</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>UserDeleteServlet</servlet-name>
+  	<servlet-class>com.news.controller.UserDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UserDeleteServlet</servlet-name>
+  	<url-pattern>/deleteUser</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 新闻栏目管理 -->
+  <servlet>
+  	<servlet-name>ChannelQueryServlet</servlet-name>
+  	<servlet-class>com.news.controller.ChannelQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ChannelQueryServlet</servlet-name>
+  	<url-pattern>/queryChannel</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ChannelInsertServlet</servlet-name>
+  	<servlet-class>com.news.controller.ChannelInsertServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ChannelInsertServlet</servlet-name>
+  	<url-pattern>/insertChannel</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ChannelUpdateServlet</servlet-name>
+  	<servlet-class>com.news.controller.ChannelUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ChannelUpdateServlet</servlet-name>
+  	<url-pattern>/updateChannel</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ChannelDeleteServlet</servlet-name>
+  	<servlet-class>com.news.controller.ChannelDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ChannelDeleteServlet</servlet-name>
+  	<url-pattern>/deleteChannel</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 新闻管理 -->
+  <servlet>
+  	<servlet-name>NewsQueryServlet</servlet-name>
+  	<servlet-class>com.news.controller.NewsQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>NewsQueryServlet</servlet-name>
+  	<url-pattern>/queryNews</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>NewsInsertServlet</servlet-name>
+  	<servlet-class>com.news.controller.NewsInsertServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>NewsInsertServlet</servlet-name>
+  	<url-pattern>/insertNews</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>NewsUpdateServlet</servlet-name>
+  	<servlet-class>com.news.controller.NewsUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>NewsUpdateServlet</servlet-name>
+  	<url-pattern>/updateNews</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>NewsDeleteServlet</servlet-name>
+  	<servlet-class>com.news.controller.NewsDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>NewsDeleteServlet</servlet-name>
+  	<url-pattern>/deleteNews</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>NewsShowInsertServlet</servlet-name>
+  	<servlet-class>com.news.controller.NewsShowInsertServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>NewsShowInsertServlet</servlet-name>
+  	<url-pattern>/showInsertNews</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>NewsShowUpdateServlet</servlet-name>
+  	<servlet-class>com.news.controller.NewsShowUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>NewsShowUpdateServlet</servlet-name>
+  	<url-pattern>/showUpdateNews</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 新闻管理 -->
+  <servlet>
+  	<servlet-name>NewsAppQueryServlet</servlet-name>
+  	<servlet-class>com.news.controller.NewsAppQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>NewsAppQueryServlet</servlet-name>
+  	<url-pattern>/appQueryNews</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>NewsAppGetServlet</servlet-name>
+  	<servlet-class>com.news.controller.NewsAppGetServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>NewsAppGetServlet</servlet-name>
+  	<url-pattern>/appGetNews</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 验证码 -->
+   <servlet>
+  	<servlet-name>Kaptcha</servlet-name>
+  	<servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>
+  	<!-- 如果想要对验证码进行设置,可以通过init-param初始化参数标签来设置 -->
+  	<init-param>
+  		<param-name>kaptcha.image.width</param-name>
+  		<param-value>100</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>kaptcha.image.height</param-name>
+  		<param-value>45</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>kaptcha.textproducer.char.length</param-name>
+  		<param-value>4</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>kaptcha.textproducer.font.size</param-name>
+  		<param-value>28</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Kaptcha</servlet-name>
+  	<url-pattern>/kaptcha.jpg</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

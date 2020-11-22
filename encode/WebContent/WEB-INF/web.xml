@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>encode</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>AServlet</display-name>
+    <servlet-name>AServlet</servlet-name>
+    <servlet-class>com.lhf.servlet.AServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AServlet</servlet-name>
+    <url-pattern>/AServlet</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <display-name>Encodingfilter</display-name>
+    <filter-name>Encodingfilter</filter-name>
+    <filter-class>com.lhf.filter.Encodingfilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>Encodingfilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+</web-app>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 配置bean id属性：配置bean的名称，该属性值在IOC容器中是唯一的 class属性：配置bean的全类名，Spring会利用反射技术实例化该bean -->
+	<bean id="helloWorld"
+		class="com.atguigu.spring.HelloWorld">
+		<!-- 通过property标签给bean的属性赋值 -->
+		<property name="name" value="Spring"></property>
+	</bean>
+
+	<bean id="helloWorld2" class="com.atguigu.spring.HelloWorld"></bean>
+
+</beans>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="script/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	//1、JSON对象
+	//属性名必须使用双引号括起来：属性名和属性值之间使用冒号分隔，多个属性之间使用逗号分隔
+	var jsonObj = {"name":"孙悟空", "age":520};
+//	alert(jsonObj.name);
+	
+	//2、JSON数组
+	var jsonArray = ["猪八戒", 1000, false, null, jsonObj];
+	//获取JSON数组中第五个元素中的age属性值
+//	alert(jsonArray[4].age);
+	
+	//创建一个稍微复杂的JSON对象
+	var fzJson = {
+			"name":"唐僧",
+			"age":18,
+			"sons":[
+				{"name":"孙悟空"},
+				{"name":"小白龙"},
+				{"name":"猪八戒", "wives":[
+					{"name":"嫦娥", "age":10000},
+					{"name":"高翠兰", "age":16},
+					{"name":"某某菩萨", "age":38}
+				]},
+				{"name":"沙悟净"}
+			]
+	};
+	//获取fzJson对象中唐僧的第三个徒弟的第二任夫人的年龄
+//	alert(fzJson.sons[2].wives[1].age);
+	
+	//将JSON对象转换为JSON字符串
+	var objToStr = JSON.stringify(jsonObj);
+//	alert(objToStr)
+
+	//声明一个JSON字符串转换为JSON对象
+	var jsonStr = '{"name":"白骨精","age":18}';
+//	alert(jsonStr)
+	//将JSON字符串转换为JSON对象
+	var strToObj = JSON.parse(jsonStr);
+//	alert(strToObj)
+
+
+	$(function(){
+		//给按钮绑定单击事件
+		$("#btnId").click(function(){
+			//设置请求地址
+			var url = "JSONServlet";
+			//发送Ajax请求
+			$.post(url,function(res){
+				alert(res);
+			},"text")
+		});
+	});
+</script>
+</head>
+<body>
+	<button id="btnId">发送Ajax请求接收JSON格式响应的数据</button>
+</body>
+</html>

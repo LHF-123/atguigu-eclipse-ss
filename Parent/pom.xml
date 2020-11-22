@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.atguigu.maven</groupId>
+  <artifactId>Parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+  <!-- 通过继承管理依赖 -->
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.9</version>
+			<scope>test</scope>
+		</dependency>
+  	</dependencies>
+  </dependencyManagement>
+  
+  <!-- 聚合 -->
+  <modules>
+  	<module>../MakeFriend</module>
+  	<module>../HelloFriend</module>
+  	<module>../OurFriend</module>
+  	<module>../Hello</module>
+  </modules>
+</project>

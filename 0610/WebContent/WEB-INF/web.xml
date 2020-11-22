@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>0610</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- 验证码Servlet -->
+  <servlet>
+  	<servlet-name>Kaptcha</servlet-name>
+  	<servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>
+  	<!-- 如果想要对验证码进行设置,可以通过init-param初始化参数标签来设置 -->
+  	<init-param>
+  		<param-name>kaptcha.image.width</param-name>
+  		<param-value>130</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>kaptcha.image.height</param-name>
+  		<param-value>45</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>kaptcha.textproducer.char.length</param-name>
+  		<param-value>4</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>kaptcha.textproducer.font.size</param-name>
+  		<param-value>30</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Kaptcha</servlet-name>
+  	<url-pattern>/kaptcha.jpg</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
